@@ -9,8 +9,8 @@
 // ==========================================================
 const state = {
   currentPage: 1,
-  sisterName: "Sister",
-  senderName: "Your Bestie",
+  sisterName: "Anu",
+  senderName: "Sourav",
   customNote: "",
   escapeCount: 0,
   yesScale: 1.0,
