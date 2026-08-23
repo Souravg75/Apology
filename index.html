@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Thank You & Forgive Me | For My Bestie & Soul Sister 💖</title>
+  <meta name="description" content="A sincere, heartwarming tribute and apology to my dearest best friend and non-blooded sister.">
+  <!-- Google Fonts for emotional & friendly typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Floating Background Particles Canvas -->
+  <canvas id="bg-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Top Floating Controls -->
+  <header class="top-nav">
+    <div class="brand">
+      <span class="heart-pulse">🌸</span>
+      <span class="brand-text">For My Bestie & Soul Sister</span>
+    </div>
+    
+    <div class="nav-controls">
+      <button id="sound-btn" class="icon-btn" title="Toggle Music" aria-label="Toggle Sound">
+        <span id="sound-icon">🎵</span>
+        <span class="btn-tooltip">Play Music</span>
+      </button>
+      <button id="customize-btn" class="icon-btn" title="Personalize Names" aria-label="Personalize Names">
+        <span>✏️</span>
+        <span class="btn-tooltip">Customize</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Step Progress Indicator (6 Steps) -->
+  <nav class="step-nav" aria-label="Progress Tracker">
+    <div class="step-track">
+      <div class="step-progress-bar" id="step-progress-bar"></div>
+      
+      <button class="step-indicator active" data-step="1" id="step-dot-1" onclick="navigateToPage(1)">
+        <span class="step-number">1</span>
+        <span class="step-label">My Apology</span>
+      </button>
+      <button class="step-indicator" data-step="2" id="step-dot-2" onclick="navigateToPage(2)">
+        <span class="step-number">2</span>
+        <span class="step-label">Promises</span>
+      </button>
+      <button class="step-indicator" data-step="3" id="step-dot-3" onclick="navigateToPage(3)">
+        <span class="step-number">3</span>
+        <span class="step-label">The Question</span>
+      </button>
+      <button class="step-indicator" data-step="4" id="step-dot-4" onclick="navigateToPage(4)">
+        <span class="step-number">4</span>
+        <span class="step-label">Peace Treaty</span>
+      </button>
+      <button class="step-indicator" data-step="5" id="step-dot-5" onclick="navigateToPage(5)">
+        <span class="step-number">5</span>
+        <span class="step-label">Thank You</span>
+      </button>
+      <button class="step-indicator" data-step="6" id="step-dot-6" onclick="navigateToPage(6)">
+        <span class="step-number">6</span>
+        <span class="step-label">Our Memories</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Multi-Page Container -->
+  <main class="page-container">
+
+    <!-- ======================================================== -->
+    <!-- PAGE 1: THE HEARTFELT APOLOGY OPENING                     -->
+    <!-- ======================================================== -->
+    <section id="page-1" class="page-view active" aria-label="Page 1: Heartfelt Apology">
+      <div class="card glass-card hero-card">
+        <div class="badge-pill">🌸 Sincere Apology 🌸</div>
+        
+        <h1 class="page-title">
+          Dearest <span class="sister-name-display highlight-text">Bestie</span>,
+        </h1>
+        
+        <p class="subtitle">
+          We may not share the same blood, but I have always cherished you as my sister and dearest best friend. I made a mistake, and I am truly sorry from the bottom of my heart... 🥺
+        </p>
+
+        <!-- Interactive Envelope Opening Section -->
+        <div class="envelope-wrapper" id="envelope-wrapper">
+          <div class="envelope" id="envelope" onclick="toggleEnvelope()">
+            <div class="envelope-back"></div>
+            <div class="letter" id="letter">
+              <div class="letter-stamp">❤️</div>
+              <div class="letter-content">
+                <h3 class="handwritten-title">Dear <span class="sister-name-display">Bestie</span>,</h3>
+                <p id="apology-message-preview" class="handwritten-text">
+                  You are the person I’ve always trusted, laughed with, and treated with all the love and respect of a real sister. Knowing that I caused you pain breaks my heart. You never deserved any hurt from me. Please accept my heartfelt apology.
+                </p>
+                <div class="signature">
+                  With all my respect and care,<br>
+                  <strong class="sender-name-display highlight-text">Your Best Friend</strong>
+                </div>
+              </div>
+            </div>
+            <div class="envelope-flap" id="envelope-flap"></div>
+            <div class="envelope-front">
+              <div class="envelope-seal" id="envelope-seal">
+                <span>💌 Click to Open Letter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="envelope-hint" id="envelope-hint">✨ Tap the envelope above to read my letter ✨</p>
+
+        <!-- Flip Reasons Cards -->
+        <div class="reasons-grid">
+          <div class="mini-card reason-card" tabindex="0">
+            <div class="reason-icon">🌟</div>
+            <h4>My Non-Blooded Sister</h4>
+            <p>Blood makes relatives, but love and loyalty made you my sister.</p>
+          </div>
+          <div class="mini-card reason-card" tabindex="0">
+            <div class="reason-icon">🌸</div>
+            <h4>Always My Pillar</h4>
+            <p>You’ve been my confidante, my advisor, and my favorite person to talk to.</p>
+          </div>
+          <div class="mini-card reason-card" tabindex="0">
+            <div class="reason-icon">💎</div>
+            <h4>Truly Irreplaceable</h4>
+            <p>No friendship in my life compares to the bond we built together.</p>
+          </div>
+        </div>
+
+        <!-- Next Action Button -->
+        <div class="page-action-row">
+          <button class="primary-btn pulse-glow" onclick="navigateToPage(2)">
+            <span>Read My Promises to You</span>
+            <span class="btn-arrow">➔</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 2: CHERISHED VOWS & PROMISES                         -->
+    <!-- ======================================================== -->
+    <section id="page-2" class="page-view" aria-label="Page 2: Memories and Promises">
+      <div class="card glass-card">
+        <div class="badge-pill">🛡️ Unbreakable Vows 🛡️</div>
+        
+        <h2 class="page-title">
+          My Sacred Promises to You
+        </h2>
+        
+        <p class="subtitle">
+          Arguments are painful, but our friendship is something I value deeply. Here are the promises I vow to keep:
+        </p>
+
+        <!-- Interactive Promises Checklist -->
+        <div class="promises-container">
+          <h3 class="section-heading">✨ My 5 Vows to My Soul Sister:</h3>
+          
+          <div class="promise-list">
+            <label class="promise-item">
+              <input type="checkbox" checked disabled>
+              <span class="custom-checkbox">✔</span>
+              <span class="promise-text"><strong>Unconditional Respect:</strong> I will always honor your feelings, your space, and your boundaries without ego. 🤝</span>
+            </label>
+
+            <label class="promise-item">
+              <input type="checkbox" checked disabled>
+              <span class="custom-checkbox">✔</span>
+              <span class="promise-text"><strong>Listening With Pure Care:</strong> Whenever you share your heart, I will listen with complete empathy and patience. 👂</span>
+            </label>
+
+            <label class="promise-item">
+              <input type="checkbox" checked disabled>
+              <span class="custom-checkbox">✔</span>
+              <span class="promise-text"><strong>Never Taking You for Granted:</strong> The bond we share is a rare blessing, and I will treat it with the care it deserves. 💎</span>
+            </label>
+
+            <label class="promise-item">
+              <input type="checkbox" checked disabled>
+              <span class="custom-checkbox">✔</span>
+              <span class="promise-text"><strong>Standing By You No Matter What:</strong> Even from afar, if you ever need help or support, I will always be there for you. 🛡️</span>
+            </label>
+
+            <label class="promise-item">
+              <input type="checkbox" checked disabled>
+              <span class="custom-checkbox">✔</span>
+              <span class="promise-text"><strong>Praying for Your Happiness:</strong> Your smile and peace of mind will always be my genuine wish. 🕊️</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="page-action-row dual-action">
+          <button class="secondary-btn" onclick="navigateToPage(1)">
+            <span>⬅ Back to Note</span>
+          </button>
+          <button class="primary-btn pulse-glow" onclick="navigateToPage(3)">
+            <span>The Important Question</span>
+            <span class="btn-arrow">➔</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 3: THE BIG QUESTION (RUNAWAY "NO" PLAYGROUND)        -->
+    <!-- ======================================================== -->
+    <section id="page-3" class="page-view" aria-label="Page 3: The Big Question">
+      <div class="card glass-card question-card" id="question-card-container">
+        
+        <div class="badge-pill pulse-badge">💖 Moment of Truth 💖</div>
+        
+        <div class="mascot-animation">
+          <div class="mascot-face" id="mascot-face">🥺</div>
+          <div class="mascot-thought" id="speech-bubble">
+            Please forgive me, <span class="sister-name-display">Bestie</span>! 🥺
+          </div>
+        </div>
+
+        <h2 class="question-headline">
+          Can you find it in your heart to forgive me, <span class="sister-name-display highlight-text">Bestie</span>?
+        </h2>
+
+        <p class="question-subtext">
+          I know you might still be upset, but I hope you give our friendship another chance! 😇
+        </p>
+
+        <!-- Dropdown Select Option Feature -->
+        <div class="select-wrapper">
+          <label for="forgive-select" class="select-label">📋 Official Decision Dropdown:</label>
+          <div class="custom-select-container">
+            <select id="forgive-select" class="styled-select">
+              <option value="" disabled selected>-- Tap to select your answer --</option>
+              <option value="yes">Yes, I forgive you! You're lucky you're my bestie 🥰</option>
+              <option value="no">No, I'm still upset with you! 😤</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Interactive Runaway Button Arena -->
+        <div class="button-arena" id="button-arena">
+          
+          <!-- The Growing YES Button -->
+          <button id="btn-yes" class="choice-btn yes-btn" onclick="handleYesClick()">
+            <span class="btn-icon">💖</span>
+            <span class="btn-text">YES, I Forgive You!</span>
+            <span class="btn-shine"></span>
+          </button>
+
+          <!-- The Slipping Away Runaway NO Button -->
+          <button id="btn-no" class="choice-btn no-btn">
+            <span class="btn-icon">😤</span>
+            <span class="btn-text">No Way!</span>
+          </button>
+
+        </div>
+
+        <!-- Dynamic reaction counter & teasing tips -->
+        <div class="evasion-meter" id="evasion-meter">
+          <div class="meter-info">
+            <span>"No" escape attempts: <strong id="escape-count">0</strong></span>
+            <span class="meter-hint">💡 (Hint: The "No" button will keep running away!)</span>
+          </div>
+        </div>
+
+        <!-- Thoughtful bypass if she still feels hurt -->
+        <div class="gentle-bypass-container">
+          <p class="bypass-text">If you still need time and can't forgive me yet, please know that I understand...</p>
+          <button class="text-link-btn" onclick="navigateToPage(5)">
+            <span>Read my message of gratitude & memory tribute ➔</span>
+          </button>
+        </div>
+
+        <div class="page-action-row" style="margin-top: 1.2rem;">
+          <button class="secondary-btn btn-sm" onclick="navigateToPage(2)">
+            <span>⬅ Revisit Promises</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 4: CELEBRATION & SISTER PEACE TREATY                  -->
+    <!-- ======================================================== -->
+    <section id="page-4" class="page-view" aria-label="Page 4: Celebration and Treaty">
+      <div class="card glass-card celebration-card">
+        
+        <div class="celebration-header">
+          <div class="celebration-badge">🎉 OFFICIAL TREATY SIGNED 🎉</div>
+          <h2 class="celebration-title">
+            YAAAAY! Best Soul Sister Ever! 🥳💖
+          </h2>
+          <p class="celebration-subtitle">
+            I knew our friendship was stronger than any misunderstanding! As a token of infinite gratitude, your official privilege vouchers are now active:
+          </p>
+        </div>
+
+        <!-- Signed Peace Certificate Box -->
+        <div class="certificate-box" id="certificate-node">
+          <div class="cert-border">
+            <div class="cert-header">
+              <span class="cert-seal">📜</span>
+              <h3>Official Bestie Peace Treaty</h3>
+              <p class="cert-date" id="cert-date">Ratified on Today</p>
+            </div>
+            
+            <div class="cert-body">
+              <p>
+                This certifies that <strong class="sister-name-display highlight-text">Bestie</strong> has graciously pardoned <strong class="sender-name-display highlight-text">Her Best Friend</strong>. Peace, unconditional care, and timeless laughter have been restored! 🏰✨
+              </p>
+            </div>
+
+            <div class="cert-signatures">
+              <div class="sig-block">
+                <span class="sig-line handwritten-font">Forgiven with Love ❤️</span>
+                <span class="sig-title"><span class="sister-name-display">Bestie</span>'s Seal</span>
+              </div>
+              <div class="sig-block">
+                <span class="sig-line handwritten-font">Forever Grateful 🌟</span>
+                <span class="sig-title"><span class="sender-name-display">Sender</span>'s Seal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sibling Privilege Redeemable Coupons -->
+        <div class="vouchers-section">
+          <h3 class="section-heading">🎟️ Your Exclusive Redeemable Vouchers:</h3>
+          <p class="vouchers-subtitle">Tap any coupon to claim it right now!</p>
+          
+          <div class="vouchers-grid">
+            <div class="voucher-card" onclick="claimCoupon(this, 'Ice Cream Treat')">
+              <div class="voucher-icon">🍦</div>
+              <div class="voucher-content">
+                <h4>Free Ice Cream Treat</h4>
+                <p>Redeemable anytime for your favorite ice cream or dessert.</p>
+                <span class="voucher-tag">TAP TO REDEEM</span>
+              </div>
+            </div>
+
+            <div class="voucher-card" onclick="claimCoupon(this, 'Always On Call')">
+              <div class="voucher-icon">📞</div>
+              <div class="voucher-content">
+                <h4>24/7 Vent & Call Pass</h4>
+                <p>Call or text anytime you need someone to listen, vent, or advise.</p>
+                <span class="voucher-tag">TAP TO REDEEM</span>
+              </div>
+            </div>
+
+            <div class="voucher-card" onclick="claimCoupon(this, 'Fav Food Treat')">
+              <div class="voucher-icon">🍕</div>
+              <div class="voucher-content">
+                <h4>Your Favorite Meal on Me</h4>
+                <p>Whenever you want to eat good food, the bill is 100% on me.</p>
+                <span class="voucher-tag">TAP TO REDEEM</span>
+              </div>
+            </div>
+
+            <div class="voucher-card" onclick="claimCoupon(this, 'Zero Arguments')">
+              <div class="voucher-icon">👑</div>
+              <div class="voucher-content">
+                <h4>VIP Princess Treatment</h4>
+                <p>You are always right, and you get complete priority with zero debates.</p>
+                <span class="voucher-tag">TAP TO REDEEM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Row leading to Gratitude & Memory Pages -->
+        <div class="page-action-row celebration-actions">
+          <button class="primary-btn pulse-glow" onclick="navigateToPage(5)">
+            <span>Read My Thank You Message For All The Days ➔</span>
+          </button>
+          <button class="secondary-btn" onclick="printOrSaveTreaty()">
+            <span>💾 Save Treaty</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 5: "THANK YOU FOR EVERYTHING" (DEEP GRATITUDE)       -->
+    <!-- ======================================================== -->
+    <section id="page-5" class="page-view" aria-label="Page 5: Heartfelt Gratitude">
+      <div class="card glass-card gratitude-card">
+        
+        <div class="badge-pill gratitude-badge">🌟 Eternal Gratitude 🌟</div>
+        
+        <h2 class="page-title">
+          Thank You for All the Days & Support
+        </h2>
+
+        <p class="subtitle">
+          Even if anger lingers today, my respect, appreciation, and love for having you in my life will never fade...
+        </p>
+
+        <div class="gratitude-letter-box">
+          <div class="gratitude-quote-mark">“</div>
+          
+          <div class="gratitude-content">
+            <h3 class="gratitude-salutation">To My Dearest <span class="sister-name-display">Sister by Heart</span>,</h3>
+            
+            <p>
+              Life rarely gives us people who care for us unconditionally without expecting anything in return. You were that person for me.
+            </p>
+            <p>
+              I may not be your biological brother, but the way you treated me, the support you gave me, and the moments we shared made me feel like I had the greatest sister in the whole world. You stood by me during times when I had no one else to share my thoughts with.
+            </p>
+            <p>
+              I will never forget the conversations we had, the laughs we shared, and the strength you gave me. Even if you choose to stay angry at me, and even if we talk less, please know that <strong>I will never forget your support for the rest of my life.</strong>
+            </p>
+            <p>
+              You deserve only respect, happiness, and peace. Thank you for every single day you were there for me.
+            </p>
+            
+            <div class="gratitude-signature">
+              Forever thankful to you,<br>
+              <strong class="sender-name-display highlight-text">Your Bestie</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gratitude Pillars -->
+        <div class="gratitude-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🤝</div>
+            <h4>Your Genuine Support</h4>
+            <p>You listened without judging and stood by me when I needed guidance.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">☀️</div>
+            <h4>The Light You Brought</h4>
+            <p>Your smile, energy, and care turned ordinary days into cherished memories.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">💎</div>
+            <h4>An Eternal Place</h4>
+            <p>Time and distance can never erase the respect and bond I hold for you.</p>
+          </div>
+        </div>
+
+        <!-- Navigation Row to Page 6 -->
+        <div class="page-action-row dual-action" style="margin-top: 2rem;">
+          <button class="secondary-btn" onclick="navigateToPage(4)">
+            <span>⬅ Previous Page</span>
+          </button>
+          <button class="primary-btn pulse-glow" onclick="navigateToPage(6)">
+            <span>Walk Down Our Memory Lane 📸</span>
+            <span class="btn-arrow">➔</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 6: "OUR GOLDEN MEMORIES" (ANIMATED 3D CAROUSEL)      -->
+    <!-- ======================================================== -->
+    <section id="page-6" class="page-view" aria-label="Page 6: Memory Showcase & Moving Carousel">
+      <div class="card glass-card memory-card">
+        
+        <div class="badge-pill memory-badge">📸 Our 12 Unforgettable Memories 📸</div>
+        
+        <h2 class="page-title">
+          Moments That Live Forever in My Heart
+        </h2>
+
+        <p class="subtitle">
+          Every photo tells a story of friendship, laughter, mutual support, and pure affection. Watch our memories unfold in motion:
+        </p>
+
+        <!-- View Switcher Tabs (Carousel vs All Scrapbook Grid) -->
+        <div class="view-switch-container">
+          <button class="view-tab-btn active" id="tab-carousel-btn" onclick="switchMemoryView('carousel')">
+            <span>🎞️ Moving Filmstrip Carousel</span>
+          </button>
+          <button class="view-tab-btn" id="tab-grid-btn" onclick="switchMemoryView('grid')">
+            <span>📸 All 12 Scrapbook Photos</span>
+          </button>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- 1. DYNAMIC MOVING 3D PHOTO CAROUSEL (12 SLIDES)      -->
+        <!-- ==================================================== -->
+        <div class="carousel-section" id="carousel-view">
+          
+          <div class="carousel-wrapper" id="carousel-wrapper">
+            
+            <!-- Slides Track -->
+            <div class="carousel-track" id="carousel-track">
+
+              <!-- Slide 1: Festive Blessings Together -->
+              <div class="carousel-slide active" data-index="0" onclick="openLightbox('assets/images/memory_festive.jpg', 'Blessed Moments Together', 'Seeking blessings together with pure hearts and genuine smiles. A moment frozen in time that I will always cherish.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_festive.jpg" alt="Festive moments together" class="slide-img">
+                    <span class="slide-sticker">🌺 Pure Blessings</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Festive Smiles & Pure Hearts</h3>
+                    <p>Standing together before the goddess with prayers and warm smiles.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Shoulder Arm Selfie (Warmth & Trust) -->
+              <div class="carousel-slide" data-index="1" onclick="openLightbox('assets/images/memory_shoulder.jpg', 'Unconditional Trust & Warmth', 'The effortless comfort and trust we share — resting an arm over the shoulder like true siblings who feel completely safe around each other.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_shoulder.jpg" alt="Sweet shoulder lean selfie" class="slide-img">
+                    <span class="slide-sticker">👭 Sibling Comfort</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Pure Comfort & Sisterly Trust</h3>
+                    <p>The effortless bond where words were never even needed.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3: Study Sessions & Peace Sign -->
+              <div class="carousel-slide" data-index="2" onclick="openLightbox('assets/images/memory_study.jpg', 'Study Sessions & Classroom Laughs', 'Sitting through classes, sharing notes, laughing in between lectures, and flashing the victory peace sign ✌️!')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_study.jpg" alt="Classroom study session with peace sign" class="slide-img">
+                    <span class="slide-sticker">📚 Study Buddy ✌️</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Classroom Notes & Silly Laughs</h3>
+                    <p>Turning boring study sessions into unforgettable fun.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 [NEW]: Mirror Selfie Shopping -->
+              <div class="carousel-slide" data-index="3" onclick="openLightbox('assets/images/memory_mirror_shopping.jpg', 'Shopping Spree Mirror Selfies', 'Picking out outfits, posing in front of the clothing store mirror, laughing at style choices, and having the best time shopping.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_mirror_shopping.jpg" alt="Shopping mall mirror selfie" class="slide-img">
+                    <span class="slide-sticker">👗 Shopping & Style</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Shopping Sprees & Mirror Poses</h3>
+                    <p>Testing out styles, holding the phone, and enjoying pure fun.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 [NEW]: Nighttime Illuminated Landmark Selfie -->
+              <div class="carousel-slide" data-index="4" onclick="openLightbox('assets/images/memory_night_lights.jpg', 'City Lights & Nighttime Moments', 'Standing together in front of illuminated architectural lights in the cozy night air, sharing warmth and smiles.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_night_lights.jpg" alt="Night lights illuminated landmark selfie" class="slide-img">
+                    <span class="slide-sticker">✨ Night Lights</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>City Lights & Evening Glow</h3>
+                    <p>Glowing lights in the night, with a friendship brighter than all of them.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 6: Red Kurta & Saree Festive Glow -->
+              <div class="carousel-slide" data-index="5" onclick="openLightbox('assets/images/memory_red_festive.jpg', 'Festive Vibrance & Red Attire', 'Both dressed up in vibrant red traditional attire, lighting up the day with unmatched festive elegance and sibling joy.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_red_festive.jpg" alt="Festive traditional red attire selfie" class="slide-img">
+                    <span class="slide-sticker">🏮 Traditional Elegance</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Festive Red & Glowing Joy</h3>
+                    <p>Dressed up and celebrating life’s colors side by side.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 7: Bus Commute Selfie -->
+              <div class="carousel-slide" data-index="6" onclick="openLightbox('assets/images/memory_bus.jpg', 'Everyday Commutes & Sweet Conversations', 'Traveling together on daily bus rides, sharing music, talking about life, and enjoying the breeze.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_bus.jpg" alt="Bus ride commute selfie" class="slide-img">
+                    <span class="slide-sticker">🚌 Bus Journeys</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Daily Commutes & Heartfelt Chats</h3>
+                    <p>Long rides made short by laughter and honest talks.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 8: Street Market Selfie -->
+              <div class="carousel-slide" data-index="7" onclick="openLightbox('assets/images/memory_street.jpg', 'Street Market Strolls', 'No fancy restaurants needed — just street food, stalls, and your company made everything extraordinary.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_street.jpg" alt="Street market selfie together" class="slide-img">
+                    <span class="slide-sticker">🍧 Street Adventures</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Street Strolls & Snack Craving</h3>
+                    <p>Finding magic in simple, everyday street adventures.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 9: Mall Hangout Selfie -->
+              <div class="carousel-slide" data-index="8" onclick="openLightbox('assets/images/memory_mall.jpg', 'Mall Hangout & Carefree Fun', 'Roaming the shopping mall corridors with friends, clicking endless selfies, and feeling genuinely carefree.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_mall.jpg" alt="Shopping mall hangout selfie" class="slide-img">
+                    <span class="slide-sticker">🛍️ Mall Hangout</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Carefree Days & Endless Selfies</h3>
+                    <p>Shopping mall trips filled with genuine energy and fun.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 10: Standing Strong Together Outdoors -->
+              <div class="carousel-slide" data-index="9" onclick="openLightbox('assets/images/memory_together.jpg', 'Standing By Each Other', 'Standing side by side against all odds — more than just friends, a bond of mutual protection, care, and sisterly love.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_together.jpg" alt="Standing together outdoors" class="slide-img">
+                    <span class="slide-sticker">🛡️ Soul Siblings</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Standing Strong Side by Side</h3>
+                    <p>Having each other’s back through every season of life.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 11: Radiant Holi Colors Portrait -->
+              <div class="carousel-slide" data-index="10" onclick="openLightbox('assets/images/memory_holi.jpg', 'Your Radiant & Colorful Smile', 'The vibrant spirit and genuine joy you bring into the world. That infectious smile lights up everything around you.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_holi.jpg" alt="Her vibrant Holi portrait" class="slide-img">
+                    <span class="slide-sticker">🎨 Radiant Spirit</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Vibrant Colors & Pure Radiance</h3>
+                    <p>A smile so bright it could wash away any gloom.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 12: Graceful Shawl Portrait -->
+              <div class="carousel-slide" data-index="11" onclick="openLightbox('assets/images/memory_style.jpg', 'Grace, Strength & Elegance', 'The wonderful, independent, and graceful person you are. You deserve the best life has to offer.')">
+                <div class="slide-card">
+                  <div class="slide-image-container">
+                    <img src="assets/images/memory_style.jpg" alt="Her stylish portrait with shawl" class="slide-img">
+                    <span class="slide-sticker">👑 The Queen Bestie</span>
+                    <div class="slide-zoom-hint"><span>🔍 Tap to expand</span></div>
+                  </div>
+                  <div class="slide-caption">
+                    <h3>Grace, Confidence & Beauty</h3>
+                    <p>Strong, independent, and truly one in a billion.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Carousel Controls (Arrows) -->
+            <button class="carousel-nav-btn prev-btn" id="carousel-prev" onclick="prevSlide()" aria-label="Previous Slide">❮</button>
+            <button class="carousel-nav-btn next-btn" id="carousel-next" onclick="nextSlide()" aria-label="Next Slide">❯</button>
+
+          </div>
+
+          <!-- Carousel Controls Bottom Bar -->
+          <div class="carousel-bottom-bar">
+            
+            <button class="carousel-play-btn" id="carousel-play-toggle" onclick="toggleCarouselAutoPlay()" title="Toggle Auto-Slide">
+              <span id="play-icon">⏸️</span>
+              <span id="play-text">Auto-Moving</span>
+            </button>
+
+            <!-- Slide Dots / Pagination Indicator (12 Dots) -->
+            <div class="carousel-dots-container" id="carousel-dots">
+              <!-- Dynamically populated / 12 dots -->
+            </div>
+
+            <div class="carousel-counter">
+              <span id="current-slide-num">1</span> / <strong>12</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- 2. FULL SCRAPBOOK POLAROID GRID VIEW (ALL 12 PHOTOS)  -->
+        <!-- ==================================================== -->
+        <div class="scrapbook-grid-section" id="grid-view" style="display: none;">
+          <div class="memory-scrapbook-grid">
+            
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_festive.jpg', 'Blessed Moments Together', 'Seeking blessings together with pure hearts and genuine smiles.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_festive.jpg" alt="Festive moments" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">🌺 PUJA BLESSINGS</span><h4>Festive Smiles Together</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_shoulder.jpg', 'Sibling Comfort & Trust', 'Resting an arm on the shoulder with absolute trust and warmth.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_shoulder.jpg" alt="Shoulder lean selfie" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">👭 COMFORT & TRUST</span><h4>Pure Sisterly Comfort</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_study.jpg', 'Study Sessions & Classroom Laughs', 'Sharing notes and flashing the victory peace sign ✌️!')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_study.jpg" alt="Study session" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">📚 STUDY BUDDY</span><h4>Classroom Notes & Laughs</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_mirror_shopping.jpg', 'Shopping Spree Mirror Selfies', 'Testing out styles, holding the phone, and enjoying pure fun in the clothing store mirror.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_mirror_shopping.jpg" alt="Shopping mirror selfie" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">👗 SHOPPING FUN</span><h4>Mirror Selfies & Styles</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_night_lights.jpg', 'City Lights & Nighttime Moments', 'Glowing architectural lights in the evening with warmth and friendship.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_night_lights.jpg" alt="Night lights selfie" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">✨ NIGHT LIGHTS</span><h4>Evening Glow & Smiles</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_red_festive.jpg', 'Festive Red & Traditional Glow', 'Dressed up in vibrant red traditional attire side by side.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_red_festive.jpg" alt="Red festive attire" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">🏮 TRADITIONAL GLOW</span><h4>Festive Red & Smiles</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_bus.jpg', 'Daily Commutes & Heartfelt Chats', 'Long bus rides made short by honest talks and breeze.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_bus.jpg" alt="Bus ride" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">🚌 BUS JOURNEYS</span><h4>Commutes & Chats</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_street.jpg', 'Street Market Strolls', 'Finding magic in simple street adventures and food.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_street.jpg" alt="Street selfie" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">🍧 STREET STROLLS</span><h4>Candid Street Laughs</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_mall.jpg', 'Mall Hangouts with Friends', 'Roaming the shopping corridors and taking endless selfies.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_mall.jpg" alt="Mall hangout" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">🛍️ MALL HANGOUT</span><h4>Carefree Days & Smiles</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_together.jpg', 'Standing Strong Side by Side', 'Having each other’s back through every season of life.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_together.jpg" alt="Standing together" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">🛡️ SOUL SIBLINGS</span><h4>Standing Strong Together</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_holi.jpg', 'Vibrant Colors & Pure Radiance', 'A radiant spirit and contagious smile full of colors.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_holi.jpg" alt="Holi portrait" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">🎨 VIBRANT SPIRIT</span><h4>Joy, Colors & Radiance</h4></div>
+            </div>
+
+            <div class="memory-polaroid" onclick="openLightbox('assets/images/memory_style.jpg', 'Grace, Confidence & Beauty', 'Strong, independent, and truly one in a billion.')">
+              <div class="memory-img-wrapper"><img src="assets/images/memory_style.jpg" alt="Shawl portrait" loading="lazy" class="memory-img"></div>
+              <div class="memory-caption"><span class="memory-tag">👑 THE QUEEN BESTIE</span><h4>Grace & Strength</h4></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Interactive Candle of Blessing & Well Wishes -->
+        <div class="candle-blessing-box" id="candle-blessing-box">
+          <div class="candle-icon" id="candle-flame-icon">🕯️</div>
+          <h3 id="candle-title">Send a Silent Prayer for Her Happiness</h3>
+          <p id="candle-desc">Tap the button below to light a digital candle wishing her peace, health, and limitless joy.</p>
+          
+          <button class="candle-btn" id="light-candle-btn" onclick="lightCandleForHer()">
+            <span>✨ Light a Candle for <span class="sister-name-display">Sister</span></span>
+          </button>
+        </div>
+
+        <!-- Forever Blessing Card -->
+        <div class="final-blessing-banner">
+          <h3>🕊️ My Forever Wish For You</h3>
+          <p>
+            No matter where life takes us, wherever you go, I will always pray for your safety, your success, and your brightest smile. Thank you for being the most precious part of my life.
+          </p>
+          <div class="blessing-heart">❤️ 🌸 ❤️</div>
+        </div>
+
+        <!-- Final Action Row -->
+        <div class="page-action-row celebration-actions" style="margin-top: 2rem;">
+          <button class="primary-btn pulse-glow" onclick="restartExperience()">
+            <span>🔄 Replay From Beginning</span>
+          </button>
+          <button class="secondary-btn" onclick="printOrSaveTreaty()">
+            <span>💾 Save Memory Tribute</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- LIGHTBOX MODAL FOR MEMORY PHOTOS                         -->
+  <!-- ======================================================== -->
+  <div id="lightbox-modal" class="lightbox-backdrop" onclick="closeLightbox(event)" aria-hidden="true">
+    <div class="lightbox-container" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>
+      <div class="lightbox-img-box">
+        <img id="lightbox-img" src="" alt="Memory Photo Full Size">
+      </div>
+      <div class="lightbox-caption-box">
+        <h3 id="lightbox-title">Memory Title</h3>
+        <p id="lightbox-description">Memory description goes here...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- CUSTOMIZATION MODAL (PERSONALIZATION POPUP)              -->
+  <!-- ======================================================== -->
+  <div id="customize-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card glass-card">
+      <div class="modal-header">
+        <h3>✨ Personalize Your Website</h3>
+        <button id="close-modal-btn" class="close-btn" aria-label="Close modal" onclick="closeCustomizer()">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="input-sister-name">Her Name / Nickname:</label>
+          <input type="text" id="input-sister-name" placeholder="e.g. Didi, Choti, Ananya, Sis, Bestie" value="Sister">
+        </div>
+
+        <div class="form-group">
+          <label for="input-sender-name">Your Name / Nickname:</label>
+          <input type="text" id="input-sender-name" placeholder="e.g. Your Bro, Rahul, Your Bestie" value="Your Sibling">
+        </div>
+
+        <div class="form-group">
+          <label for="input-custom-note">Custom Apology Message (Optional):</label>
+          <textarea id="input-custom-note" rows="4" placeholder="Write any specific message you want to include..."></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="secondary-btn" onclick="closeCustomizer()">Cancel</button>
+        <button class="primary-btn" onclick="saveCustomization()">Save & Apply 💖</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <footer class="app-footer">
+    <p>Honoring a timeless bond & endless gratitude ❤️ | Best Friends & Soul Siblings</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
